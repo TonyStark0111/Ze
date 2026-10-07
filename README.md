@@ -275,3 +275,190 @@ Zangetsu is licensed under the **[GNU GPL-3.0](LICENSE)**. See the included lice
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:FF4D57&height=120&section=footer" />
 
 </div>
+
+## 📁 Project Structure
+
+```text
+Zangetsu-main/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.yml
+│   │   ├── config.yml
+│   │   ├── feature_request.yml
+│   │   └── source_not_working.yml
+│   ├── screenshots/
+│   │   ├── detail.png
+│   │   ├── home.png
+│   │   ├── my-list.png
+│   │   └── search.png
+│   ├── workflows/
+│   │   └── mirror-to-codeberg.yml
+│   └── pull_request_template.md
+├── .vscode/
+│   └── launch.json
+├── android/                          # Android app + Gradle
+│   ├── app/
+│   ├── gradle/
+│   ├── build.gradle.kts
+│   ├── settings.gradle.kts
+│   └── key.properties.example
+├── ios/                              # iOS Runner + Xcode
+│   ├── Flutter/
+│   ├── Runner/
+│   ├── Runner.xcodeproj/
+│   ├── Runner.xcworkspace/
+│   └── RunnerTests/
+├── tvos/                             # Apple TV
+│   ├── Flutter/
+│   └── Podfile
+├── assets/
+│   ├── brand/                        # logos, marks
+│   ├── fonts/                        # Inter, Poppins, Roboto, …
+│   ├── icon/                         # app icons & previews
+│   └── js/                           # lnreader harness scripts
+├── cloudflare/
+│   └── log-intake/                   # wrangler worker
+├── extractors/                       # JS extractors
+│   ├── _template.js
+│   ├── doodstream.js
+│   ├── example_embed.js
+│   ├── mp4upload.js
+│   ├── okru.js
+│   └── streamlare.js
+├── providers/                        # JS providers
+│   ├── _template.js
+│   ├── allanime.js
+│   ├── example.js
+│   └── netmirror.js
+├── js_harness/                       # provider/extractor tests
+│   ├── host.mjs
+│   ├── contract.test.mjs
+│   ├── allanime.test.mjs
+│   ├── netmirror.test.mjs
+│   ├── doodstream.test.mjs
+│   ├── mp4upload.test.mjs
+│   ├── okru.test.mjs
+│   └── streamlare.test.mjs
+├── supabase/
+│   ├── functions/
+│   └── migrations/
+├── test/                             # Flutter unit/widget tests
+│   ├── aniyomi/
+│   ├── core/
+│   ├── download/
+│   ├── features/
+│   ├── fixtures/
+│   ├── logging/
+│   ├── mihon/
+│   ├── models/
+│   ├── playback/
+│   ├── provider/
+│   ├── reader/
+│   ├── reading/
+│   ├── torrent/
+│   ├── tv/
+│   └── watch_together/
+├── third_party/
+│   └── sqflite_tvos/
+├── tool/
+│   └── gen_l10n.py
+├── tools/
+│   ├── lnreader/
+│   └── migration/
+├── web_reset/
+├── lib/
+│   ├── main.dart
+│   ├── l10n/
+│   ├── features/
+│   │   ├── aniyomi/
+│   │   ├── announce/
+│   │   ├── auth/
+│   │   ├── backup/
+│   │   ├── community/
+│   │   ├── detail/
+│   │   ├── downloads/
+│   │   ├── history/
+│   │   ├── home/
+│   │   ├── mihon/
+│   │   ├── notify/
+│   │   ├── onboarding/
+│   │   ├── people/
+│   │   ├── player/
+│   │   ├── reader/
+│   │   ├── schedule/
+│   │   ├── search/
+│   │   ├── settings/
+│   │   ├── shell/
+│   │   ├── sources/
+│   │   ├── trailer/
+│   │   ├── update/
+│   │   └── watch_together/
+│   └── core/
+│       ├── analytics/
+│       ├── anilist/
+│       ├── aniyomi/
+│       ├── announce/
+│       ├── app_icon/
+│       ├── appwrite/
+│       ├── backup/
+│       ├── brand/
+│       ├── cache/
+│       ├── cast/
+│       ├── di/
+│       ├── discord/
+│       ├── download/
+│       ├── error/
+│       ├── export/
+│       ├── hive/
+│       ├── i18n/
+│       ├── lnreader/
+│       ├── locale/
+│       ├── logging/
+│       ├── metadata/
+│       ├── mihon/
+│       ├── mode/
+│       ├── models/                   # video_source, media, …
+│       ├── notify/
+│       ├── platform/
+│       ├── playback/
+│       ├── prefs/
+│       ├── privacy/
+│       ├── provider/                 # CloudStream, JS engine, registry
+│       ├── reading/
+│       ├── repository/
+│       ├── schedule/
+│       ├── search/
+│       ├── share/
+│       ├── state/
+│       ├── supabase/
+│       ├── theme/
+│       ├── torrent/
+│       ├── tracker/
+│       ├── trailer/
+│       ├── translation/
+│       ├── tv/
+│       ├── ui/
+│       ├── update/
+│       ├── zmode/
+│       ├── app_config.dart
+│       ├── app_mode.dart
+│       └── environment.dart
+├── .gitignore
+├── .metadata
+├── AI_POLICY.md
+├── CLA.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── LICENSE-Apache-2.0.txt
+├── NOTICE.md
+├── README.md
+├── SECURITY.md
+├── analysis_options.yaml
+├── announcements.json
+├── devtools_options.yaml
+├── l10n.yaml
+├── pubspec.yaml
+└── pubspec.lock
+```
+
+\~1850 files total · Flutter + Android / iOS / tvOS · JS providers & extractors
